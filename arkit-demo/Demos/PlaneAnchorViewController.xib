@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaneAnchorViewController" customModule="arkit_demo" customModuleProvider="target">
+            <connections>
+                <outlet property="sceneView" destination="OEw-4d-D2k" id="OXG-uZ-GeW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEw-4d-D2k">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="iRL-lA-C9T" appends="YES" id="my4-9r-PW5"/>
+                    </connections>
+                </arscnView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OEw-4d-D2k" secondAttribute="bottom" id="Vkv-n7-opc"/>
+                <constraint firstAttribute="trailing" secondItem="OEw-4d-D2k" secondAttribute="trailing" id="Wr8-Tt-3zv"/>
+                <constraint firstItem="OEw-4d-D2k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m4f-ZC-FUY"/>
+                <constraint firstItem="OEw-4d-D2k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="u6I-2j-DNB"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+        </view>
+        <tapGestureRecognizer id="iRL-lA-C9T">
+            <connections>
+                <action selector="tapScreenWithSender:" destination="-1" id="VEj-v7-VwI"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

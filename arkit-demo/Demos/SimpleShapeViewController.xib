@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleShapeViewController" customModule="arkit_demo" customModuleProvider="target">
+            <connections>
+                <outlet property="sceneView" destination="huL-3U-RGu" id="0jQ-qA-vDF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huL-3U-RGu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="jq2-Ev-ceI" appends="YES" id="5GE-pp-9Vl"/>
+                        <outletCollection property="gestureRecognizers" destination="yVW-ee-hzL" appends="YES" id="YWM-4P-hIx"/>
+                    </connections>
+                </arscnView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="huL-3U-RGu" secondAttribute="bottom" id="9gY-kf-Dg5"/>
+                <constraint firstAttribute="trailing" secondItem="huL-3U-RGu" secondAttribute="trailing" id="Si9-Vt-ddM"/>
+                <constraint firstItem="huL-3U-RGu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Yoc-dM-IQC"/>
+                <constraint firstItem="huL-3U-RGu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f3R-wN-mc4"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+        </view>
+        <tapGestureRecognizer id="jq2-Ev-ceI">
+            <connections>
+                <action selector="tapScreen" destination="-1" id="LUH-Um-qOD"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer numberOfTouchesRequired="2" id="yVW-ee-hzL">
+            <connections>
+                <action selector="twoFingerTapScreen" destination="-1" id="m4N-2J-hbt"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
