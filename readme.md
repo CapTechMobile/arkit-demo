@@ -6,7 +6,7 @@
 
 <img src="collage.jpg" height="500"></img>
 
-This source code is provided as part of an online tutorial: [ARKit Fundamentals in iOS 11](https://www.captechconsulting.com/insights/blog)
+This source code is provided as part of an online tutorial: [ARKit Fundamentals in iOS 11](https://www.captechconsulting.com/blogs/arkit-fundamentals-in-ios-11)
 
 ## Features
 
