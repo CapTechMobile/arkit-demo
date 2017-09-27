@@ -32,7 +32,7 @@ class HomeViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if !ARSessionConfiguration.isSupported {
+        if !ARConfiguration.isSupported {
             let alert = UIAlertController(title: "Device Requirement", message: "Sorry, this app only runs on devices that support augmented reality through ARKit.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
