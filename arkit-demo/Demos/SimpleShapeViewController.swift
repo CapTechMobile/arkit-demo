@@ -26,11 +26,11 @@ class SimpleShapeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if ARWorldTrackingSessionConfiguration.isSupported {
-            let configuration = ARWorldTrackingSessionConfiguration()
+        if ARWorldTrackingConfiguration.isSupported {
+            let configuration = ARWorldTrackingConfiguration()
             self.sceneView.session.run(configuration)
-        } else if ARSessionConfiguration.isSupported {
-            let configuration = ARSessionConfiguration()
+        } else if ARConfiguration.isSupported {
+            let configuration = AROrientationTrackingConfiguration()
             self.sceneView.session.run(configuration)
         }
     }

@@ -34,8 +34,8 @@ class PlaneMapperViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if ARWorldTrackingSessionConfiguration.isSupported {
-            let configuration = ARWorldTrackingSessionConfiguration()
+        if ARWorldTrackingConfiguration.isSupported {
+            let configuration = ARWorldTrackingConfiguration()
             configuration.planeDetection = .horizontal
             self.sceneView.session.run(configuration)
         }
