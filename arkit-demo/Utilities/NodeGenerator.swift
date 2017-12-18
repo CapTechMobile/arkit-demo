@@ -72,7 +72,11 @@ struct NodeGenerator {
     }
     
     static func update(planeNode: SCNNode, from planeAnchor: ARPlaneAnchor, hidden: Bool) {
-        planeNode.geometry = self.plane(from: planeAnchor, hidden: hidden)
+        
+        let updatedGeometry = self.plane(from: planeAnchor, hidden: hidden)
+        
+        planeNode.geometry = updatedGeometry
+        planeNode.physicsBody?.physicsShape = SCNPhysicsShape(geometry: updatedGeometry, options: nil)
         planeNode.position = self.position(from: planeAnchor)
     }
     
